@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery</title>
+
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: white;
+      }
+
+      img {
+        max-width: 70vw;
+        max-height: 70vh;
+      }
+    </style>
+  </head>
+
+  <body>
+    <img id="randomImage" src="" />
+
+    <script>
+      const images = [
+        "images/source/685d74738b7ca77dcb8ae510_1337835428_18279-4.jpg",
+        "images/source/close-up-of-a-charming-ginger-kitten-with-big-blue-eyes-resting-on-a-soft-blanket-photo.jpg",
+      ];
+
+      const randomIndex = Math.floor(Math.random() * images.length);
+
+      document.getElementById("randomImage").src = images[randomIndex];
+    </script>
+  </body>
+</html>
